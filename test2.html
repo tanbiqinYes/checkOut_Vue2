@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vueJs-学习</title>
+</head>
+<body>
+	<div id="app">
+		<p v-bind:title="message">鼠标悬停几秒钟查看此处动态绑定的提示信息！</p>
+		<p v-if="seen">你现在看见我啦！</p>
+		<ol>
+			<li v-for="todo in todos">
+				{{todo.test}}
+			</li>
+		</ol>
+		<ol>
+			<li v-for="todo in todosomething">
+				{{todo.test}}
+			</li>
+		</ol>
+		<p>{{message2}}</p>
+		<button v-on:click="reverseMessage">逆转信息</button>
+
+		<p>{{message3}}</p>
+		<input type="text" v-model="message3"/>
+
+		<ol>
+			<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>	
+		</ol>
+	</div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/test2.js"></script>
+</body>
+</html>

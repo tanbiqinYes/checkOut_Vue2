@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myTest VueJs</title>
+</head>
+<body>
+	<div id="app_2">
+		<span v-bind:title="message">数遍悬停几秒钟查看此处动态绑定的提示信息！</span>
+	</div>
+	<div id="app_3">
+		<p v-if="seen">现在你看到我了</p>
+	</div>
+
+	<div id="app_4">
+		<ol>
+			<li v-for="todo in todos">
+				{{todo.text}}
+			</li>
+		</ol>
+	</div>
+
+	<div id="app_5">
+		<p>{{message}}</p>
+		<button v-on:click="reverseMessage">逆转消息</button>
+	</div>
+
+	<div id="app_6">
+		<p>{{message}}</p>
+		<input v-model="message"/>
+	</div>
+
+	<div id="app_7">
+		<ol>
+			<!--为每个todo-item 提供待办项对象-->
+			<!--待办项对象是变量，及其内容是动态的-->
+			<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+		</ol>
+	</div>
+
+	<!--js-->
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/test.js"></script>
+</body>
+</html>
